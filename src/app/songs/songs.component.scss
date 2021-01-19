@@ -10,13 +10,14 @@
     margin-right: auto;
     text-decoration: solid;
     color:  #A3AAAE;
+    padding: 5px;
 }
 
 .card-title{
     font-size: 25px;
     background-color: #F9F6EF;
     color: black;
-    border-bottom: #A3AAAE 3px solid !important;
+    outline: #a3a3a3 4px solid !important;
     height: 50px;
     position: relative;
     top: 33%;
@@ -55,6 +56,10 @@ input{
     border-color: #A3AAAE;
 }
 
+h3{
+    color: #A3AAAE;
+}
+
 .spacer{
     background-color: black;
     height: 100px;
@@ -63,4 +68,8 @@ input{
 .content{
     border-top: #A3AAAE 3px solid!important;
     
+}
+
+mat-grid-tile{
+    color:#A3AAAE;
 }

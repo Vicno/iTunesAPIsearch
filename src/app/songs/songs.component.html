@@ -13,31 +13,26 @@
     </div>
 
     <h3>Search Results</h3>
-
     <div class="row">
       <div class="col-4" *ngIf="searchResults.length > 0">
-        <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-list cols="3" rowHeight="500px">
           <mat-grid-tile *ngFor="let song of searchResults[1]">
-            <div class="col-5">
-              <div class="card">
-                <div class="card-title">
-                 
-                  {{ song.trackName }}
-                  
-                </div>
-                <img
-                  src="{{ song.artworkUrl100 }}"
-                  alt="Image not found"
-                  onerror="this.onerror=null;this.src='https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-music-notes-icon-png-image_4184656.jpg';"
-                />
-                <div class="card-body">
-                  <div class="content">
-                    <p>Artist: {{ song.artistName }}</p>
-                    <p>Album: {{ song.collectionName }}</p>
-                    <p>Release Date: {{ song.releaseDate }}</p>
-                    <!--<p id="date" onload="getDate('{{ song.releaseDate }}')"></p>-->
-                    <p>Song Price: {{ song.trackPrice }}</p>
-                  </div>
+            <div class="card">
+              <div class="card-title">
+                {{ song.trackName }}
+              </div>
+              <img
+                src="{{ song.artworkUrl100 }}"
+                alt="Image not found"
+                onerror="this.onerror=null;this.src='https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-music-notes-icon-png-image_4184656.jpg';"
+              />
+              <div class="card-body">
+                <div>
+                  <p>Artist: {{ song.artistName }}</p>
+                  <p>Album: {{ song.collectionName }}</p>
+                  <p>Release Date: {{ song.releaseDate }}</p>
+                  <!--<p id="date" onload="getDate('{{ song.releaseDate }}')"></p>-->
+                  <p>Song Price: {{ song.trackPrice }}</p>
                 </div>
               </div>
             </div>
