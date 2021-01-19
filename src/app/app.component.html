@@ -1,13 +1,6 @@
-<script>
-  fetch('https://itunes.apple.com/search?term=jack+johnson&limit=25').then(function(response){
-    return response.json();
-  }).then( function (obj) {
-    console.log(obj);
-  }).catch(function (error){
-    console.error('Something went wrong');
-    console.error(error);
-  });
-</script>
-
-
-<router-outlet></router-outlet>
+<div class="container">
+	<h1>iTunes Search</h1>
+  <!-- Artist Component Will Go Here -->
+  <app-songs></app-songs>
+	<!-- Audio Player Component Will Go Here -->
+</div>

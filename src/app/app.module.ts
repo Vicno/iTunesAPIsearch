@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+// Include the JSONP module for JSONP support
+import {HttpClientModule, HttpClientJsonpModule} from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SongsComponent } from './songs/songs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SongsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     AppRoutingModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
