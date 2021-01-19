@@ -14,7 +14,7 @@ export class JsonService {
 
   public search(searchTerm)
   {
-    const url = `${API.SEARCH}term=${searchTerm}&limit=25&entity=musicArtist`;
+    const url = `${API.SEARCH}term=${searchTerm}&limit=25&entity=song`;
     //console.log("La url de busqueda es ", url);
     // Pass the key for your callback (in this case 'callback')
     // as the second argument to the jsonp method

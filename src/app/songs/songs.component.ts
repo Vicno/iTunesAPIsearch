@@ -11,9 +11,14 @@ import { JsonService } from '../shared/json.service';
 export class SongsComponent {
 
   searchResults: Array<any> = [];
-  artistId: number = 0;
+  trackId: number = 0;
+  artist: string;
+  album: string;
+  date: string;
+  price: number;
+  image: string;
 
-  selectedArtist: string;
+  selectedSong: string;
 
   constructor(private itunesService: JsonService) { }
 
@@ -24,9 +29,15 @@ export class SongsComponent {
     });
   }
 
-  getAlbums(artistId: number, artistName: string) {
-    this.artistId = artistId;
-    this.selectedArtist = artistName;
+  getAlbums(trackId: number, trackName: string, artistName: string, collectionName: string, releaseDate: string, trackPrice: number, artworkUrl100: string) {
+    this.trackId = trackId;
+    this.selectedSong = trackName;
+    this.artist = artistName;
+    this.album = collectionName;
+    this.date = releaseDate;
+    this.price = trackPrice;
+    this.image = artworkUrl100;
+    
   }
 
 }
