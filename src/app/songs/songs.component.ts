@@ -23,10 +23,16 @@ export class SongsComponent {
   constructor(private itunesService: JsonService) { }
 
   search(searchTerm) {
-    this.itunesService.search(searchTerm).subscribe(results => {
-      this.searchResults = Object.values(results);
-      console.log(this.searchResults);
-    });
+    try{
+      this.itunesService.search(searchTerm).subscribe(results => {
+        this.searchResults = Object.values(results);
+        console.log(this.searchResults);
+      });
+    }catch(error){
+      console.error("Api fetch data failed")
+      console.log(error);
+    }
+   
   }
 
   getAlbums(trackId: number, trackName: string, artistName: string, collectionName: string, releaseDate: string, trackPrice: number, artworkUrl100: string) {
@@ -39,5 +45,11 @@ export class SongsComponent {
     this.image = artworkUrl100;
     
   }
-
+/*
+  getDate(releaseDate: string){
+    var paragraph = document.getElementById("date");
+    var text = document.createTextNode(releaseDate.substring(0, releaseDate.indexOf('T')));
+    paragraph.appendChild(text);
+  }
+*/
 }
