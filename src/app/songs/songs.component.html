@@ -1,41 +1,48 @@
-<div class="row">
-    <div class="col-xs-12">
-      <input type="search" #searchBox (keyup)="search(searchBox.value)" class="form-control input-lg well" placeholder="Type to search for song...">
+<html>
+  <body>
+    <div class="row">
+      <div class="header">
+        <input
+          type="search"
+          #searchBox
+          (keyup)="search(searchBox.value)"
+          class="form-control input-lg well"
+          placeholder="Type to search for song..."
+        />
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4" *ngIf="searchResults.length > 0">
-      <h3>Search Results</h3>
+    
+        <h3>Search Results</h3>
 
-      <div class="container">
         <div class="row">
-          <div class="col-md-3 mx-auto my-5" *ngFor="let song of searchResults[1]">
-            <mdb-card>
-              <img src={{song.artworkUrl100}} alt="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d1/13/64/d113640a-3ca5-2d08-6fc0-7fa06fc12fc8/source/100x100bb.jpg">
-              <mdb-card-body>
-                <mdb-card-title>
-                  <h4>{{song.trackName}}</h4>
-                </mdb-card-title>
-      
-                <mdb-card-text>
-                  <p>Artist: {{song.artistName}}</p>
-                  <p>Album: {{song.collectionName}}</p>
-                  <p>Release Date: {{song.releaseDate}}</p>
-                  <p>Song Price: {{song.trackPrice}}</p>
-                </mdb-card-text>
-              </mdb-card-body>
-            </mdb-card>
+          <div class="col-4" *ngIf="searchResults.length > 0">
+            <mat-grid-list cols="2" rowHeight="2:1">
+              <mat-grid-tile *ngFor="let song of searchResults[1]">
+                <div class="col-5" >
+                  <div class="card">
+                    <h5 class="card-title">{{ song.trackName }}</h5>
+                    <img
+                      src="{{ song.artworkUrl100 }}"
+                      alt="Image not found"
+                      onerror="this.onerror=null;this.src='https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-music-notes-icon-png-image_4184656.jpg';"
+                    />
+                    <div class="card-body">
+                      <div>
+                        <p>Artist: {{ song.artistName }}</p>
+                        <p>Album: {{ song.collectionName }}</p>
+                        <p>Release Date: {{ song.releaseDate }}</p>
+                        <p>Song Price: {{ song.trackPrice }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-grid-tile>
+              
+            </mat-grid-list>
+
+            
           </div>
         </div>
-      </div>
-<!--
-      <p *ngFor="let song of searchResults[1]">
-        <a id="{{ song.trackId }}" href="#" (click)="getAlbums(song.trackId, song.trackName, song.artistName, song.collectionName, song.releaseDate, song.trackPrice, song.artworkUrl100)">{{ song.trackName }} , {{ song.artistName}} , {{ song.collectionName }}, {{song.releaseDate}}, {{song.trackPrice}}, {{song.artworkUrl100}} </a>
-      </p>
-      
-    </div>
-    <div class="col-xs-12" [ngClass]="{'col-sm-8': searchResults.length > 0 }">
-      <h3>{{ selectedSong }}</h3>
-      <!-- App Album Component Goes Here -->
-    </div>
-  </div>
+      <div class="spacer"></div>
+  </body>
+</html>
