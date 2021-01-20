@@ -10,12 +10,14 @@ import {HttpClientModule, HttpClientJsonpModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SongsComponent } from './songs/songs.component';
+import { JsonService } from './shared/json.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongsComponent
+    SongsComponent,
+    JsonService,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    SongsComponent,
+    JsonService
   ],
   providers: [],
   bootstrap: [AppComponent]
