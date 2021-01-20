@@ -31,8 +31,7 @@
                   <p>Artist: {{ song.artistName }}</p>
                   <p>Album: {{ song.collectionName }}</p>
                   <p>Release Date: {{ song.releaseDate }}</p>
-                  <!--<p id="date" onload="getDate('{{ song.releaseDate }}')"></p>-->
-                  <p>Song Price: {{ song.trackPrice }}</p>
+                  <p>Song Price: {{ song.trackPrice }} $us</p>
                 </div>
               </div>
             </div>
@@ -40,6 +39,5 @@
         </mat-grid-list>
       </div>
     </div>
-    <div class="spacer"></div>
   </body>
 </html>

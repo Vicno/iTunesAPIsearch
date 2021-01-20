@@ -1,16 +1,27 @@
 .container{
   width: 100%;
   background-color: #F9F6EF;
-  border: #a3aaae;
-  border-style: double;
   text-align: center;
 }
 
 .header{
     background-color: #F9F6EF !important;
-    border: #a3aaae;
-    border-style: double;
     text-align: center;
 }
 
+html { 
+    background: black; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .title{
+      font-size: 50px;
+  }
+
+  .spacer{
+      height: 30px;
+  }
 

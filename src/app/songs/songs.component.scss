@@ -18,19 +18,19 @@
     background-color: #F9F6EF;
     color: black;
     outline: #a3a3a3 4px solid !important;
-    height: 50px;
+    height: 53px;
     position: relative;
     top: 33%;
     text-align: center;
 }
 
 html { 
-    background: black no-repeat 
-      center center fixed; 
+    background: black; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    text-align: center;
   }
 
 img{
@@ -58,18 +58,13 @@ input{
 
 h3{
     color: #A3AAAE;
+    border: #A3aaae solid 2px !important;
+    width: 20%;
+    border-radius: 5px;
+    margin-left: 40%;
 }
 
-.spacer{
-    background-color: black;
-    height: 100px;
-}
 
-.content{
-    border-top: #A3AAAE 3px solid!important;
-    
-}
-
-mat-grid-tile{
-    color:#A3AAAE;
+.card-body{
+    border-top: #A3AAAE 3px solid!important; 
 }
