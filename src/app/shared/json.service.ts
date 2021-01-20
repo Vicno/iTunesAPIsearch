@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientJsonpModule,HttpClientModule,HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 const API = {
   SEARCH: 'https://itunes.apple.com/search?',

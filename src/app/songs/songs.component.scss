@@ -1,70 +1,69 @@
-.card{
-    border: 5px double #A3AAAE !important;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 5px !important;
-    margin-bottom: 3rem;
-    max-width: 500px;
-    min-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: solid;
-    color:  #A3AAAE;
-    padding: 5px;
+.card {
+  border: 5px double #a3aaae !important;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 5px !important;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: solid;
+  color: #a3aaae;
+  padding: 5px;
 }
 
-.card-title{
-    font-size: 25px;
-    background-color: #F9F6EF;
-    color: black;
-    outline: #a3a3a3 4px solid !important;
-    height: 53px;
-    position: relative;
-    top: 33%;
-    text-align: center;
+.card-title {
+  font-size: 25px;
+  background-color: #f9f6ef;
+  color: black;
+  outline: #a3a3a3 4px solid !important;
+  height: 53px;
+  position: relative;
+  top: 33%;
+  text-align: center;
 }
 
-html { 
-    background: black; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-  }
+html {
+  background: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
 
-img{
-    max-width: 100px;
-    max-height: 100px;
-    margin: 1rem;
-    border: #A3AAAE 3px solid !important ;
-    border-radius: 5px;
-  
+img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 1rem;
+  border: #a3aaae 3px solid !important ;
+  border-radius: 5px;
 }
 
 .header {
-    width: 100%;
-    background-color: #F9F6EF;
-    text-align: center;
+  width: 100%;
+  background-color: #f9f6ef;
+  text-align: center;
 }
 
-input{
-    width: 50%;
-    margin: 1rem;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color: #A3AAAE;
+input {
+  width: 50%;
+  margin: 2rem;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: #a3aaae;
 }
 
-h3{
-    color: #A3AAAE;
-    border: #A3aaae solid 2px !important;
-    width: 20%;
-    border-radius: 5px;
-    margin-left: 40%;
+h3 {
+  color: #a3aaae;
+  border: #a3aaae solid 2px !important;
+  width: 20%;
+  border-radius: 5px;
+  margin-left: 40%;
+  margin-top: 2rem;
 }
 
-
-.card-body{
-    border-top: #A3AAAE 3px solid!important; 
+.card-body {
+  border-top: #a3aaae 3px solid !important;
 }

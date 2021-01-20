@@ -1,55 +1,27 @@
 import { Component } from '@angular/core';
 import { JsonService } from '../shared/json.service';
 
-
 @Component({
   selector: 'app-songs',
   templateUrl: './songs.component.html',
   styleUrls: ['./songs.component.scss'],
-  providers: [JsonService]
+  providers: [JsonService],
 })
+
 export class SongsComponent {
-
   searchResults: Array<any> = [];
-  trackId: number = 0;
-  artist: string;
-  album: string;
-  date: string;
-  price: number;
-  image: string;
 
-  selectedSong: string;
-
-  constructor(private itunesService: JsonService) { }
+  constructor(private itunesService: JsonService) {}
 
   search(searchTerm) {
-    try{
-      this.itunesService.search(searchTerm).subscribe(results => {
+    try {
+      this.itunesService.search(searchTerm).subscribe((results) => {
         this.searchResults = Object.values(results);
         console.log(this.searchResults);
       });
-    }catch(error){
-      console.error("Api fetch data failed")
+    } catch (error) {
+      console.error('Api fetch data failed');
       console.log(error);
     }
-   
   }
-
-  getAlbums(trackId: number, trackName: string, artistName: string, collectionName: string, releaseDate: string, trackPrice: number, artworkUrl100: string) {
-    this.trackId = trackId;
-    this.selectedSong = trackName;
-    this.artist = artistName;
-    this.album = collectionName;
-    this.date = releaseDate;
-    this.price = trackPrice;
-    this.image = artworkUrl100;
-    
-  }
-/*
-  getDate(releaseDate: string){
-    var paragraph = document.getElementById("date");
-    var text = document.createTextNode(releaseDate.substring(0, releaseDate.indexOf('T')));
-    paragraph.appendChild(text);
-  }
-*/
 }
